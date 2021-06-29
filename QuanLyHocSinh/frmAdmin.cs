@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyHocSinh
 {
-    public partial class Login : Form
+    public partial class frmAdmin : Form
     {
-        public Login()
+        public frmAdmin()
         {
             InitializeComponent();
-        }
-
-        private void btnDangNhap_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            Dispose();
         }
     }
 }

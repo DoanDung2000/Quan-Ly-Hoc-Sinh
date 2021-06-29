@@ -49,16 +49,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login.cs">
+    <Compile Include="frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmForgotPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForgotPass.Designer.cs">
+      <DependentUpon>frmForgotPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmResetPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResetPass.Designer.cs">
+      <DependentUpon>frmResetPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="frmForgotPass.resx">
+      <DependentUpon>frmForgotPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResetPass.resx">
+      <DependentUpon>frmResetPass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
