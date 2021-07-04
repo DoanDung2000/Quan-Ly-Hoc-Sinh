@@ -49,11 +49,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CircularPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashBoard.Designer.cs">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLHocSinh.Designer.cs">
+      <DependentUpon>frmQLHocSinh.cs</DependentUpon>
     </Compile>
     <Compile Include="frmForgotPass.cs">
       <SubType>Form</SubType>
@@ -73,8 +88,20 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashBoard.resx">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLHocSinh.resx">
+      <DependentUpon>frmQLHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmForgotPass.resx">
       <DependentUpon>frmForgotPass.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +119,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -106,6 +134,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avata_01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avata+02.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

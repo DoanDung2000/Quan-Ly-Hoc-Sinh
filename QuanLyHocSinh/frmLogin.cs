@@ -19,7 +19,6 @@ namespace QuanLyHocSinh
         {
             InitializeComponent();
             //tắt label thông báo
-            lblThongBao.TextAlign = ContentAlignment.MiddleCenter;
             lblThongBao.Visible = false;
             //dặt lại user name và pass
             
@@ -42,7 +41,7 @@ namespace QuanLyHocSinh
             if (txtUser.Text == USER_NAME && txtPass.Text == PASSWORD)
             {
                 this.Hide();
-                frmAdmin admin = new frmAdmin();
+                frmAdmin admin = new frmAdmin(USER_NAME,PASSWORD);
                 admin.Show();
             }
             else

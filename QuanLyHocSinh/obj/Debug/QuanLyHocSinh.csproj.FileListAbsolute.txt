@@ -12,3 +12,6 @@ F:\BTL-Windows\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmLogin.reso
 F:\BTL-Windows\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmForgotPass.resources
 F:\BTL-Windows\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmResetPass.resources
 F:\BTL-Windows\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.csproj.AssemblyReference.cache
+F:\BTL-Windows\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmAdmin.resources
+F:\BTL-Windows\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmQLHocSinh.resources
+F:\BTL-Windows\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmDashBoard.resources
