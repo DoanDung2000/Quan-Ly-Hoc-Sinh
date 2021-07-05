@@ -15,3 +15,4 @@ F:\BTL-Windows\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.csproj.Assemb
 F:\BTL-Windows\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmAdmin.resources
 F:\BTL-Windows\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmQLHocSinh.resources
 F:\BTL-Windows\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmDashBoard.resources
+F:\BTL-Windows\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmHome.resources

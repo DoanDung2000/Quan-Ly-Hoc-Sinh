@@ -10,55 +10,40 @@ namespace QuanLyHocSinh
         private IconButton currentBtn; //nut ien tai
         private Panel leftBorderBtn; //panel thanh chay
         private Form currentChildForm; //form con hien tai
+        //Nut sổ lên
+        private IconButton caretUpBtn = new IconButton();
         public frmAdmin(string name, string pass)
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(5, 40);
-            panelMenu.Controls.Add(leftBorderBtn);
+           
+
             //form
-            /*this.Text = string.Empty;
-            this.ControlBox = false;
-            this.DoubleBuffered = true;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            */
+            //this.Text = string.Empty;
+            //this.ControlBox = false;
+            //this.DoubleBuffered = true;
+            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
             //open form
-            startForm(Color.FromArgb(0, 124, 195));
             //login
             lblLogin.BackColor = Color.Transparent;
             lblLogin.Text = name;
             lblLogin.ForeColor = Color.White;
+            //panel Hoc Phi
+            panelHocPhi.Hide();
+            //xử lý event
+            caretUpBtn.Click += caretUpBtn_Click;
+            //scroll menu
+            panelMenu.AutoScroll = true;
+            panelHocPhi.AutoScroll = true;
         }
 
-        private void startForm(Color color)
+        private void ActivateButton(object senderBtn,Color color,Panel inputPanel)
         {
-            btnDashBoard.BackColor = Color.White;
-            btnDashBoard.ForeColor = color;
-            btnDashBoard.TextAlign = ContentAlignment.MiddleLeft;
-            btnDashBoard.IconColor = color;
-            btnDashBoard.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnDashBoard.ImageAlign = ContentAlignment.MiddleLeft;
-            //leftborderbtn
-            leftBorderBtn.BackColor = color;
-            leftBorderBtn.Location = new Point(0, btnDashBoard.Location.Y);
-            leftBorderBtn.BringToFront();
-            //dat icon va label change
-            iconChange.IconChar = btnDashBoard.IconChar;
-            lblChange.Text = btnDashBoard.Text;
-            //current child form
-            currentChildForm = new frmDashBoard();
-            currentChildForm.TopLevel = false;
-            currentChildForm.FormBorderStyle = FormBorderStyle.None;
-            currentChildForm.Dock = DockStyle.Fill;
-            panelContent.Controls.Add(currentChildForm);
-            panelContent.Tag = currentChildForm;
-            currentChildForm.BringToFront();
-            currentChildForm.Show();
-        }
-        private void ActivateButton(object senderBtn,Color color)
-        {
+            inputPanel.Controls.Add(leftBorderBtn);
             //neu nut duoc chon
-            if(senderBtn != null)
+            if (senderBtn != null)
             {
                 DisableButon();
                 //ep kieu cho senderBtn
@@ -73,6 +58,7 @@ namespace QuanLyHocSinh
                 leftBorderBtn.BackColor = color;
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.BringToFront();
+                leftBorderBtn.Show();
                 //dat icon va label change
                 iconChange.IconChar = currentBtn.IconChar;
                 lblChange.Text = currentBtn.Text;
@@ -95,17 +81,25 @@ namespace QuanLyHocSinh
 
         private void btnDashBoard_MouseHover(object sender, System.EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(0, 124, 195));
+            ActivateButton(sender, Color.FromArgb(0, 124, 195),panelMenu);
+            //set lai mau nut sổ xuống
+            caretUpBtn.IconColor = Color.DimGray;
+            iconCaretDown.IconColor = Color.DimGray;
         }
 
         private void btnQLHocSinh_MouseHover(object sender, System.EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(0, 124, 195));
+            ActivateButton(sender, Color.FromArgb(0, 124, 195),panelMenu);
+            //set lai mau nut sổ xuống
+            caretUpBtn.IconColor = Color.DimGray;
         }
 
         private void btnQLLopHoc_MouseHover(object sender, System.EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(0, 124, 195));
+            ActivateButton(sender, Color.FromArgb(0, 124, 195), panelMenu);
+            //set lai mau nut sổ xuống
+            caretUpBtn.IconColor = Color.DimGray;
+            iconCaretDown.IconColor = Color.DimGray;
         }
 
         private void btnGVCN_Click(object sender, System.EventArgs e)
@@ -115,22 +109,34 @@ namespace QuanLyHocSinh
 
         private void btnGVCN_MouseHover(object sender, System.EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(0, 124, 195));
+            ActivateButton(sender, Color.FromArgb(0, 124, 195), panelMenu);
+            //set lai mau nut sổ xuống
+            caretUpBtn.IconColor = Color.DimGray;
+            iconCaretDown.IconColor = Color.DimGray;
         }
 
         private void btnDiemSo_MouseHover(object sender, System.EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(0, 124, 195));
+            ActivateButton(sender, Color.FromArgb(0, 124, 195), panelMenu);
+            //set lai mau nut sổ xuống
+            caretUpBtn.IconColor = Color.DimGray;
+            iconCaretDown.IconColor = Color.DimGray;
         }
 
         private void btnThongKe_MouseHover(object sender, System.EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(0, 124, 195));
+            ActivateButton(sender, Color.FromArgb(0, 124, 195), panelMenu);
+            //set lai mau nut sổ xuống
+            caretUpBtn.IconColor = Color.DimGray;
+            iconCaretDown.IconColor = Color.DimGray;
         }
 
         private void btnThonTin_MouseHover(object sender, System.EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(0, 124, 195));
+            ActivateButton(sender, Color.FromArgb(0, 124, 195), panelMenu);
+            //set lai mau nut sổ xuống
+            caretUpBtn.IconColor = Color.DimGray;
+            iconCaretDown.IconColor = Color.DimGray;
         }
 
         private void btnHocPhi_Click(object sender, System.EventArgs e)
@@ -140,23 +146,24 @@ namespace QuanLyHocSinh
 
         private void btnHocPhi_MouseHover(object sender, System.EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(0, 124, 195));
+            ActivateButton(sender, Color.FromArgb(0, 124, 195), panelMenu);
+            panelIconDownUp.BackColor = Color.White;
+            iconCaretDown.IconColor = Color.FromArgb(0, 124, 195);
+            caretUpBtn.IconColor = Color.FromArgb(0, 124, 195);
+
         }
 
         private void btnLogo_Click(object sender, System.EventArgs e)
         {
-            Reset();
-        }
-        private void Reset()
-        {
+            OpenChildForm(new frmHome());
             DisableButon();
-            leftBorderBtn.Visible = false;
+            leftBorderBtn.Hide();
             iconChange.IconChar = IconChar.Home;
             lblChange.Text = "Home";
         }
         private void OpenChildForm(Form childForm)
         {
-            if(lblChange != null)
+            if(currentChildForm != null)
             {
                 currentChildForm.Close();
             }
@@ -180,6 +187,61 @@ namespace QuanLyHocSinh
         private void btnDashBoard_Click(object sender, System.EventArgs e)
         {
             OpenChildForm(new frmDashBoard());
+        }
+
+        
+        private void iconCaretDown_Click(object sender, System.EventArgs e)
+        {
+            panelHocPhi.Show();
+            
+            caretUpBtn.BackColor = Color.Transparent;
+            caretUpBtn.FlatStyle = FlatStyle.Flat;
+            caretUpBtn.FlatAppearance.BorderSize = 0;
+            caretUpBtn.FlatAppearance.BorderColor = Color.White;
+            caretUpBtn.FlatAppearance.MouseDownBackColor = Color.White;
+            caretUpBtn.FlatAppearance.MouseOverBackColor = Color.White;
+            caretUpBtn.Text = string.Empty;
+            caretUpBtn.IconChar = IconChar.CaretUp;
+            caretUpBtn.IconColor = Color.FromArgb(0, 124, 195);
+            caretUpBtn.IconSize = 25;
+            caretUpBtn.Dock = DockStyle.Fill;
+            caretUpBtn.Size = new Size(16, 16);
+            panelIconDownUp.Controls.Add(caretUpBtn);
+            caretUpBtn.Show();
+            iconCaretDown.Hide();
+        }
+
+        private void caretUpBtn_Click(object sender, System.EventArgs e)
+        {
+            panelHocPhi.Hide();
+            caretUpBtn.Hide();
+            iconCaretDown.Show();
+            panelIconDownUp.Controls.Add(iconCaretDown);
+        }
+        private void btnLichSu_MouseHover(object sender, System.EventArgs e)
+        {
+            ActivateButton(sender, Color.FromArgb(225, 83, 33), panelHocPhi);
+            //set lai mau nut sổ xuống
+            caretUpBtn.IconColor = Color.DimGray;
+            iconCaretDown.IconColor = Color.DimGray;
+        }
+
+        private void btnCongNo_MouseHover(object sender, System.EventArgs e)
+        {
+            
+            ActivateButton(sender, Color.FromArgb(225, 83, 33), panelHocPhi);
+            //set lai mau nut sổ xuống
+            caretUpBtn.IconColor = Color.DimGray;
+            iconCaretDown.IconColor = Color.DimGray;
+        }
+
+        private void btnThanhToan_MouseHover(object sender, System.EventArgs e)
+        {
+
+            ActivateButton(sender, Color.FromArgb(225, 83, 33), panelHocPhi);
+            //set lai mau nut sổ xuống
+            caretUpBtn.IconColor = Color.DimGray;
+            iconCaretDown.IconColor = Color.DimGray;
         }
     }
 }
