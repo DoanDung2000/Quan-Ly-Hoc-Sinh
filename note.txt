@@ -1,1 +1,8 @@
-Test commit
+git commit -m
+git add all
+git add remote <duong dan toi git>
+git push -u origin main
+//xem trang thai
+git status
+//xem lich su
+git log
