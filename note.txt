@@ -6,3 +6,9 @@ git push -u origin main
 git status
 //xem lich su
 git log
+//sau khi clone về tạo nhánh mới để pull request bằng lệnh
+git checkout -b <tên nhánh>
+//tại nhánh này thực hiện add and commit như cũ. 
+//push bằng lệnh
+git push origin <tên nhánh vừa tạo>
+//sau khi push sẽ có một URL tại remote. copy lên brower. rồi xác nhận pull request
